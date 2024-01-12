@@ -1,6 +1,6 @@
 __all__ = ['hal_query',]
 
-def hal_query(year):
+def hal_query(year, institute):
 
     #https://realpython.com/python-requests/#getting-started-with-requests
     
@@ -13,7 +13,7 @@ def hal_query(year):
     from HalApyJson.json_parser import parse_json
    
     # Setting hal API
-    hal_api = _set_hal_api_(year)
+    hal_api = _set_hal_api_(year, institute)
     
     # Get the request response
     try:
@@ -34,7 +34,7 @@ def hal_query(year):
     return results_df   
 
     
-def _set_hal_api_(year):
+def _set_hal_api_(year, institute):
     
     from string import Template
     
@@ -46,8 +46,8 @@ def _set_hal_api_(year):
                              query = GLOBAL['QUERY_TERMS'],
                              HAL_RESULTS_NB     = GLOBAL['HAL_RESULTS_NB'] ,  # default=30; maximum= 10000
                              HAL_RESULTS_FORMAT = GLOBAL['HAL_RESULTS_FORMAT'],
-                             period = "[" + year + " TO " + year + "]",
-                             struct_name = GLOBAL['INSTITUTE'].upper(),
+                             period = "[" + year + " TO " + str(year) + "]",
+                             struct_name = institute.upper(),
                              DOC_TYPES = GLOBAL['DOC_TYPES'],
                              results_fields = ','.join(GLOBAL['HAL_FIELDS'].values()),
                             )

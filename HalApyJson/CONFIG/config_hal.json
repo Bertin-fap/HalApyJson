@@ -4,7 +4,6 @@
     "DOC_TYPES": "(ART OR COMM OR COUV OR OUV OR DOUV OR POSTER)",
     "HAL_RESULTS_NB": "250",
     "HAL_RESULTS_FORMAT": "json",
-    "INSTITUTE": "Liten",
     "QUERY_TERMS": "*:*",
     "HAL_FIELDS": {
         "01": "label_s",

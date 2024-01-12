@@ -1,6 +1,6 @@
 # HalApyJson
 ## Description
-A light interface to query HAL through its API.
+A light interface to query [HAL](https://api.archives-ouvertes.fr/docs) through its API.
 
 ## Installation
 Run the following to install:
@@ -12,10 +12,11 @@ pip install HalApyJson
 ```python
 import HalApyJson as ha
 year = "2023"
-results_df = ha.hal_query(year)
+institute = "Liten"
+results_df = ha.hal_query(year,institute)
 results_df.to_excel(<your_fullpath_file.xlsx), index = False)
 ```
-**for more exemples refer to** [HalApyJson-exemples](https://github.com/Bertin-fap/HalApyJson/Demo_HalApyJson.ipynb).
+**for more exemples refer to** [HalApyJson-exemples](https://github.com/Bertin-fap/HalApyJson/blob/main/Demo_HalApyJson.ipynb).
 
 
 # Release History
