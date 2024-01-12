@@ -57,7 +57,7 @@ def _config_hal_api(json_file_name):
         json_config_dict = json.load(file)
         
     # Sets the json_config_dict according to the status of the local config file        
-    local_config_dir_path  = get_config_dir() / Path('HAL_API')
+    local_config_dir_path  = get_config_dir() / Path('HalApyJson')
     local_config_file_path = local_config_dir_path  / Path(json_file_name)
     
     if os.path.exists(local_config_file_path):
@@ -78,8 +78,8 @@ def _config_hal_api(json_file_name):
         # thus package config file is used to create a local config file
         # to be filled by the user
         # and json_config_dict is kept at default values
-        if not os.path.exists(get_config_dir() / Path('HAL_API')):
-            os.makedirs(get_config_dir() / Path('HAL_API'))
+        if not os.path.exists(get_config_dir() / Path('HalApyJson')):
+            os.makedirs(get_config_dir() / Path('HalApyJson'))
         _dump_json(local_config_file_path, json_config_dict)      
     
     return json_config_dict, local_config_file_path
