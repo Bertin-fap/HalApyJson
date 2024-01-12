@@ -1,6 +1,6 @@
 # HalApyJson
-## Product Name
-Toolbox of utilities to compute the geomagmetic field.
+## Description
+A light interface to query HAL through its API.
 
 ## Installation
 Run the following to install:
@@ -9,16 +9,20 @@ pip install HalApyJson
 ```
 
 ## Usage example
-**refer to** [geomagnetism-exemples](https://github.com/Bertin-fap/HalApyJson/Demo_HalApyJson.ipynb).
+```python
+import HalApyJson as ha
+year = "2023"
+results_df = ha.hal_query(year)
+results_df.to_excel(<your_fullpath_file.xlsx), index = False)
+```
+**for more exemples refer to** [HalApyJson-exemples](https://github.com/Bertin-fap/HalApyJson/Demo_HalApyJson.ipynb).
 
 
 # Release History
-0.0.2 correct pole ambiguity by using limitig value of associated Legendre polynomial
-0.0.3 create geomagnetic field cartography using PlateCarree representation. 'Miller' would be better)
-0.0.9 plot the iso values of the field. Support Millet, stereographic an Lambert projection
-0.1.0 add a __main__
+1.0.0 first release
+
 
 # Meta
-	- François Bertin– francois.bertin7@wanadoo.fr 
+	- authors : BiblioAbnalysis team
 
 Distributed under the [MIT license](https://mit-license.org/)
