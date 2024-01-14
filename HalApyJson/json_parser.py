@@ -2,11 +2,10 @@ __all__ = ['parse_json',]
 
 def parse_json(response):
 
-    '''The `parse_json` function parses the dict response associoated with the json answer to the request.
+    '''The `parse_json` function parses the json file of the request.
             
-        
     Args:
-        responce (dict): the dict to be parsed.
+        responce (json file): the json file to be parsed.
     
     Returns
         (Pandas Data Frame) : The dataframe resulting from the parsed dict.

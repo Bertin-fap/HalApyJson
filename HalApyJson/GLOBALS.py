@@ -1,11 +1,10 @@
 """
 config.py docs
-A custom config json is stored in the two  following directories:
-      ~/AppData/Roaming/api_scopus_config.json  and  contains user api scopus keys
-      .ScopusApyJson/api_scopus_config.json   contain the default setting 
-If the user's api_scopus_config.json configuration file exits it  will be used. Otherwise a user's configuration file Pvcharacterization.yaml 
+A custom `config_hal.json` is stored in the two  following directories:
+      ~/AppData/Roaming/HalApyJson  and  contains user `config_hal.json`
+      .ScopusApyJson/CONFIG contain the default setting 
+If the user's `config_hal.json` configuration file exits it  will be used. Otherwise a user's configuration file Pvcharacterization.yaml 
 will be created in the user's ~/AppData/Roaming.
-The modification of the config variables will be stored in the Pvcharacterization.yaml stor in the user's WORRKING_DIR folder.
 
 """
 
