@@ -1,6 +1,6 @@
-__all__ = ['hal_query',]
+__all__ = ['get_response_from_api',]
 
-def hal_query(year, institute):
+def get_response_from_api(year, institute):
     '''The `hal_query` function queryies the HAL database via its api.
         
     Args:
@@ -39,10 +39,8 @@ def hal_query(year, institute):
             
             if response.status_code == 204:
                 print('No content')
-            else:            
-                results_df = parse_json (response)
-            
-    return results_df   
+            else:
+                return response   
 
     
 def _set_hal_api(year, institute):
