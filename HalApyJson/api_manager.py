@@ -20,6 +20,7 @@ def hal_query(year, institute):
     from pathlib import Path
     from requests.exceptions import Timeout
     
+    # Internal library imports
     from HalApyJson.json_parser import parse_json
    
     # Setting hal API
@@ -72,7 +73,7 @@ def _set_hal_api(year, institute):
                              query = GLOBAL['QUERY_TERMS'],
                              HAL_RESULTS_NB     = GLOBAL['HAL_RESULTS_NB'] ,  # default=30; maximum= 10000
                              HAL_RESULTS_FORMAT = GLOBAL['HAL_RESULTS_FORMAT'],
-                             period = "[" + year + " TO " + str(year) + "]",
+                             period = f"[{str(year)} TO {str(year)}]",
                              struct_name = institute.upper(),
                              DOC_TYPES = GLOBAL['DOC_TYPES'],
                              results_fields = ','.join(GLOBAL['HAL_FIELDS'].values()),

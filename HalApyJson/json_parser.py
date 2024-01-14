@@ -5,7 +5,7 @@ def parse_json(response):
     '''The `parse_json` function parses the json file of the request.
             
     Args:
-        responce (json file): the json file to be parsed.
+        response (dict): the json file to be parsed.
     
     Returns
         (Pandas Data Frame) : The dataframe resulting from the parsed dict.
@@ -20,15 +20,15 @@ def parse_json(response):
     
     # Internal import
     from HalApyJson.GLOBALS import GLOBAL
-
-    parsed_response = response.json()
-    parsed_response = parsed_response['response']
-    items_nbr = parsed_response['numFound']
+    
+    response_dict = response.json() 
+    parsed_response = response_dict['response']
+    items_nbr = response_dict['numFound']
     print('Number of items: ',items_nbr)
     
     fields_keys_select = GLOBAL['HAL_FIELDS'] #FIELDS_KEYS_SELECT
     results_df = pd.DataFrame(columns = fields_keys_select.keys())
-    for txt in parsed_response['docs']:
+    for txt in response_dict['docs']:
         num_df = pd.DataFrame(columns = fields_keys_select.keys())
         num_results_dict = {}
         for k,v in fields_keys_select.items(): 
