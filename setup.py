@@ -14,8 +14,8 @@ with open(path.join(this_directory, 'requirements.txt'), encoding='utf-8') as f:
 # This setup is suitable for "python setup.py develop".
 
 setup(name='HalApyJson',
-      version='0.0.0',
-      description='Python modules emulating AAL API',
+      version='0.0.1',
+      description='Python modules for parsing the response to a HAL API request',
       long_description=long_description,
       long_description_content_type='text/markdown',
       include_package_data = True,
@@ -24,7 +24,7 @@ setup(name='HalApyJson',
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.9',
-        'Topic :: Scientific/Engineering :: Information Parsinh',
+        'Topic :: Scientific/Engineering :: Information Analysis',
         'Operating System :: OS Independent',
         'Intended Audience :: Science/Research'
         ],
