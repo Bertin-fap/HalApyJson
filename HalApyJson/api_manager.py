@@ -15,10 +15,12 @@ def get_response_from_api(year, institute):
     #https://realpython.com/python-requests/#getting-started-with-requests
     
     # Standard library imports
-    import requests
     import json as json
     from pathlib import Path
     from requests.exceptions import Timeout
+    
+    # 3rd party imports
+    import requests
     
     # Internal library imports
     from HalApyJson.json_parser import parse_json

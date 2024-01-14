@@ -23,12 +23,12 @@ def parse_json(response):
     
     response_dict = response.json() 
     parsed_response = response_dict['response']
-    items_nbr = response_dict['numFound']
+    items_nbr = parsed_response['numFound']
     print('Number of items: ',items_nbr)
     
     fields_keys_select = GLOBAL['HAL_FIELDS'] #FIELDS_KEYS_SELECT
     results_df = pd.DataFrame(columns = fields_keys_select.keys())
-    for txt in response_dict['docs']:
+    for txt in parsed_response['docs']:
         num_df = pd.DataFrame(columns = fields_keys_select.keys())
         num_results_dict = {}
         for k,v in fields_keys_select.items(): 
