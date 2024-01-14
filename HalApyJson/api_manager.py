@@ -1,14 +1,14 @@
 __all__ = ['get_response_from_api',]
 
 def get_response_from_api(year, institute):
-    '''The `hal_query` function queryies the HAL database via its api.
+    '''The `hal_query` function queryies the HAL database via its API.
         
     Args:
-        year (str): the yera to query.
-        institute (str) : the institute to query
+        year (str): The year to query.
+        institute (str): The institute to query.
     
     Returns
-        (Panndas data frame) : The parsed json answer to the query.
+        (requests.models.Response): The response to the query using the HAL API.
         
     '''
 
@@ -47,36 +47,32 @@ def get_response_from_api(year, institute):
     
 def _set_hal_api(year, institute):
 
-    '''The `_set_hal_api` function buids the request to send to the HAL api:
+    '''The `_set_hal_api` function builds the query to send to the HAL API.
         
     Args:
-        year (str): the year of interest.
-        institute (str) : the institute to query.
+        year (str): The year to query.
+        institute (str): The institute to query.
         
     Returns
-        (str) : the request.
-        
-    Notes:
-        The globals 'GLOBAL' module of `GLOBALS` package is used.
+        (str) : The built query.
         
     '''
     
     # Standard library imports
     from string import Template
     
-    # Internal import
+    # Globals imports
     from HalApyJson.GLOBALS import GLOBAL
-
     
     dict_param_query = dict( 
-                             query_header = GLOBAL['HAL_URL'] + GLOBAL['HAL_GATE'] + '/?q=', 
-                             query = GLOBAL['QUERY_TERMS'],
+                             query_header       = GLOBAL['HAL_URL'] + GLOBAL['HAL_GATE'] + '/?q=', 
+                             query              = GLOBAL['QUERY_TERMS'],
                              HAL_RESULTS_NB     = GLOBAL['HAL_RESULTS_NB'] ,  # default=30; maximum= 10000
                              HAL_RESULTS_FORMAT = GLOBAL['HAL_RESULTS_FORMAT'],
-                             period = f"[{str(year)} TO {str(year)}]",
-                             struct_name = institute.upper(),
-                             DOC_TYPES = GLOBAL['DOC_TYPES'],
-                             results_fields = ','.join(GLOBAL['HAL_FIELDS'].values()),
+                             period             = f"[{str(year)} TO {str(year)}]",
+                             struct_name        = institute.upper(),
+                             DOC_TYPES          = GLOBAL['DOC_TYPES'],
+                             results_fields     = ','.join(GLOBAL['HAL_FIELDS'].values()),
                             )
     
     query = Template(

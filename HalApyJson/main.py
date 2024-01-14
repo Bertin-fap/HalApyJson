@@ -1,14 +1,16 @@
 __all__ = ['build_hal_df_from_api',]
 
 def build_hal_df_from_api(year, institute):
-    '''The `hal_query` function queryies the HAL database via its api.
+    '''The `build_hal_df_from_api` function gets the response from the HAL API 
+    using the `get_response_from_api` function of the 'api_manager' module.
+    Then, it parses this response using the `parse_json` of the 'json_parser' module.
         
     Args:
-        year (str): the yera to query.
-        institute (str) : the institute to query
+        year (str): The year to query.
+        institute (str): The institute to query.
     
     Returns
-        (Pandas data frame) : The parsed json answer to the query.
+        (pandas.core.frame.DataFrame): The dataframe resulting from the parsed response.
         
     '''
     

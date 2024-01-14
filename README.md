@@ -13,8 +13,8 @@ pip install HalApyJson
 import HalApyJson as ha
 year = "2023"
 institute = "Liten"
-results_df = ha.hal_query(year,institute)
-results_df.to_excel(<your_fullpath_file.xlsx>), index = False)
+hal_df = ha.build_hal_df_from_api(year,institute)
+hal_df.to_excel(<your_fullpath_file.xlsx>), index = False)
 ```
 **for more exemples refer to** [HalApyJson-exemples](https://github.com/Bertin-fap/HalApyJson/blob/main/Demo_HalApyJson.ipynb).
 
