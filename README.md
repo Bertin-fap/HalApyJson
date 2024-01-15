@@ -16,16 +16,11 @@ institute = "Liten"
 hal_df = ha.build_hal_df_from_api(year,institute)
 hal_df.to_excel(<your_fullpath_file.xlsx>), index = False)
 ```
-**CLI exemple**
-```python
-cli_hal -y 2023 -i liten
-```
 **for more exemples refer to** [HalApyJson-exemples](https://github.com/Bertin-fap/HalApyJson/blob/main/Demo_HalApyJson.ipynb).
 
 
 # Release History
 1.0.0 first release
-1.1.0 added CLI
 
 
 # Meta
