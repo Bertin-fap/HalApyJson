@@ -1,8 +1,7 @@
 """
-config.py docs
 A custom `hal_config.json` is stored in the two  following directories:
       ~/AppData/Roaming/HalApyJson  and  contains user `hal_config.json`
-      .ScopusApyJson/CONFIG contain the default setting 
+      .ScopusApyJson/CONFIG contains the default setting 
 If the user's `hal_config.json` configuration file exits it  will be used. Otherwise a user's configuration file Pvcharacterization.yaml 
 will be created in the user's ~/AppData/Roaming.
 
