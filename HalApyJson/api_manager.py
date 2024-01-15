@@ -1,7 +1,7 @@
 __all__ = ['get_response_from_api',]
 
 def get_response_from_api(year, institute):
-    '''The `hal_query` function queryies the HAL database via its API.
+    '''The `get_response_from_api` function gets the response to the query sent to the HAL API.
         
     Args:
         year (str): The year to query.

@@ -3,7 +3,7 @@ __all__ = ['parse_json',]
 def parse_json(response):
 
     '''The `parse_json` function parses the response to the query using the HAL API.
-    The parsing is based on the fields set in the global GLOBAL (see GLOBALS module).
+    The parsing is based on the fields set in the global 'GLOBAL' (see 'GLOBALS' module).
             
     Args:
         response (requests.models.Response): The response to be parsed.

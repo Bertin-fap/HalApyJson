@@ -13,11 +13,11 @@ with open(path.join(this_directory, 'requirements.txt'), encoding='utf-8') as f:
 
 # This setup is suitable for "python setup.py develop".
 
-setup(name ='HalApyJson',
-      version ='1.0.0',
-      description ='Python modules for parsing the response to a HAL API request',
-      long_description = long_description,
-      long_description_content_type = 'text/markdown',
+setup(name='HalApyJson',
+      version='0.0.1',
+      description='Python modules for parsing the response to a HAL API request',
+      long_description=long_description,
+      long_description_content_type='text/markdown',
       include_package_data = True,
       license = 'MIT',
       classifiers = [
@@ -28,13 +28,15 @@ setup(name ='HalApyJson',
         'Operating System :: OS Independent',
         'Intended Audience :: Science/Research'
         ],
-      entry_points = {
-        'console_scripts': ['cli_hal = HalApyJson.CLI.cli:cli_hal',],
-        },
-      keywords = 'Metadata parsing, HAL request, API management',
+      entry_points={
+                    'console_scripts': [
+                    'cli_hal = HalApyJson.CLI.cli:cli_hal',
+                                       ],
+                    },
+      keywords = 'Metadata parsing, Scopus parsing, API management',
       install_requires = install_requires,
-      author = 'BiblioAnalysis team',
-      author_email = 'francois.bertin7@wanadoo.fr, amal.chabli@orange.fr',
-      url = 'https://github.com/Bertin-fap/HalApyJson',
-      packages = find_packages(),
+      author= 'BiblioAbnalysis team',
+      author_email= 'francois.bertin7@wanadoo.fr, amal.chabli@orange.fr',
+      url= 'https://github.com/TickyWill/ScopusApyJson',
+      packages=find_packages(), # revoir le fonctionnement avec plusieurs packages
       )
