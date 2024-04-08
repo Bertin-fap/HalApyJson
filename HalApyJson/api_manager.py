@@ -36,11 +36,9 @@ def get_response_from_api(year, institute):
     else:
         if response == False: # response.status_code <200 or > 400
             print('Resource not found')
-        else:
-            print('Resquest successful\n')
-            
+        else:           
             if response.status_code == 204:
-                print('No content')
+                print('No content in response')
             else:
                 return response   
 

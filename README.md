@@ -10,10 +10,10 @@ pip install HalApyJson
 
 ## Usage example
 ```python
-import HalApyJson as ha
+import HalApyJson as haj
 year = "2023"
 institute = "Liten"
-hal_df = ha.build_hal_df_from_api(year,institute)
+hal_df = haj.build_hal_df_from_api(year,institute)
 hal_df.to_excel(<your_fullpath_file.xlsx>), index = False)
 ```
 **CLI exemple**
@@ -26,6 +26,7 @@ cli_hal -y 2023 -i liten
 # Release History
 - 1.0.0 first release
 - 1.1.0 added CLI
+- 1.1.1 removed prints
 
 
 # Meta
