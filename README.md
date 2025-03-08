@@ -28,6 +28,7 @@ cli_hal -y 2023 -i liten
 - 1.1.0 added CLI
 - 1.1.1 removed prints
 - 1.1.2 updated CLI
+- 1.1.3 refactored code after pylint scan
 
 
 # Meta

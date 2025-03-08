@@ -77,6 +77,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+Test_HAJ_amal.ipynb
 
 # IPython
 profile_default/

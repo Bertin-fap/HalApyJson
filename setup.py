@@ -1,20 +1,28 @@
 #!/usr/bin/env python
 
-from setuptools import setup, find_packages
+# Standard library imports
 from os import path
+from pathlib import Path
 
-# Read the contents of your README file
+# 3rd party imports
+from setuptools import setup, find_packages
+
+# Setting useful paths
 this_directory = path.abspath(path.dirname(__file__))
+config_dir = this_directory / Path("HalApyJson") / Path("CONFIG")
+
+# Reading the contents of your README file
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-    
+
+# Reading the contents of your requirements file
 with open(path.join(this_directory, 'requirements.txt'), encoding='utf-8') as f:
     install_requires = f.read().strip().split('\n')
 
 # This setup is suitable for "python setup.py develop".
 
 setup(name ='HalApyJson',
-      version ='1.1.1',
+      version ='1.1.3',
       description ='Python modules for parsing the response to a HAL API request',
       long_description = long_description,
       long_description_content_type = 'text/markdown',

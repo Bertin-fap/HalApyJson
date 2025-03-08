@@ -38,7 +38,12 @@
         "26": "abstract_s",
         "27": "fileMain_s",
         "28": "domainAllCode_s",
-        "29": "label_endnote"
+        "29": "label_endnote",
+		"30": "conferenceTitle_s",
+		"31": "conferenceStartDate_s",
+		"32": "peerReviewing_s",
+		"33": "proceedings_s",
+		"34": "country_s"
     },
     "HAL_FINAL_COLS": {
         "02": "Auteurs",
@@ -54,6 +59,11 @@
         "17": "Organismes",
         "20": "Type de document",
         "24": "ISSN",
-        "23": "e-ISSN"
+        "23": "e-ISSN",
+		"30": "Conference",
+		"31": "Date de conference",
+		"32": "Comite de lecture",
+		"33": "Acte de conference",
+		"34": "Pays"
     }
 }
